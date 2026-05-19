@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+
+# 백업/임시
+*.bak
+*.swp
+*~
+*.log
+
+# gstack 캐시
+.gstack/
+
+# 일일 보고 결과 (런타임 산출물)
+/tmp/team-daily-*.md
+
+# 입력 자료 — 민감 데이터 격리
+inputs/private/
+
+# 큰 입력 파일은 LFS 또는 별도 보관 권장 (필요 시 주석 해제)
+# inputs/data/*.csv
+# inputs/data/*.xlsx
+# inputs/code/*.zip
+
+# 에디터
+.idea/
+.vscode/
+
+# node / python (프로젝트 진행 중 생성될 수 있음)
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.local
