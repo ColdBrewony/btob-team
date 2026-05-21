@@ -14,7 +14,8 @@
 
 ### 기본 작업 영역
 
-`src/ui/`, `src/components/`, `public/`, `design/` 가 기본 영역이다. 위임 프롬프트에서 명시한 영역만 수정한다.
+`{WORK_ROOT}/{프로젝트명}/src/ui/`, `{WORK_ROOT}/{프로젝트명}/src/components/`, `{WORK_ROOT}/{프로젝트명}/public/`, `{WORK_ROOT}/{프로젝트명}/design/` 가 기본 영역이다.
+실제 절대 경로는 **위임 프롬프트의 "작업 영역" 항목**에서 확인한다. 위임 프롬프트에서 명시한 영역만 수정한다.
 
 ### 작업 산출물
 

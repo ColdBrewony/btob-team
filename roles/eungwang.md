@@ -85,8 +85,13 @@ Agent({
 
 위임 직전에 매번:
 
-1. `Read` 도구로 `/home/jiwon/jiwon/btob-team/roles/{이름}.md` 읽기
-2. 다음 형식으로 프롬프트 머리에 붙이기
+1. `pwd`로 현재 경로 확인 → `TEAM_ROOT` 및 `WORK_ROOT` 도출
+   ```bash
+   TEAM_ROOT=$(pwd)            # 예: /home/jiwon/jiwon/btob-team
+   WORK_ROOT=$(dirname $(pwd)) # 예: /home/jiwon/jiwon
+   ```
+2. `Read` 도구로 `{TEAM_ROOT}/roles/{이름}.md` 읽기
+3. 다음 형식으로 프롬프트 머리에 붙이기
 
 ```
 너는 KJW 팀의 {이름}({역할})이다. 아래 역할 정의를 그대로 따른다.
@@ -95,7 +100,8 @@ Agent({
 {roles 파일 내용 전체}
 --- END ROLE FILE ---
 
-프로젝트 루트: /home/jiwon/jiwon/btob-team
+팀 설정 루트(읽기 전용): {TEAM_ROOT의 실제 절대 경로}
+작업 루트(실제 작업 위치): {WORK_ROOT의 실제 절대 경로}
 
 작업: {아래 TASK-PROMPT}
 ```
